@@ -52,7 +52,7 @@ if st.button('OFF'):
     client1.on_publish = on_publish                          
     client1.connect(broker,port)  
     message =json.dumps({"Act1":act1})
-    ret= client1.publish("SALUDO2", message)
+    ret= client1.publish("SALUDO1", message)
   
     
 else:
