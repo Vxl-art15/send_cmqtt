@@ -30,7 +30,7 @@ client1.on_message = on_message
 
 
 
-st.title("MQTT Control")
+st.title("Interfaz MQTT")
 
 if st.button('ON'):
     act1="ON"
@@ -58,10 +58,10 @@ if st.button('OFF'):
 else:
     st.write('')
 
-values = st.slider('Selecciona el rango de valores',0.0, 100.0)
+values = st.slider('Define el intervalo',0.0, 100.0)
 st.write('Values:', values)
 
-if st.button('Enviar valor analógico'):
+if st.button('Transmitir señal analógica'):
     client1= paho.Client("VAL")                           
     client1.on_publish = on_publish                          
     client1.connect(broker,port)   
